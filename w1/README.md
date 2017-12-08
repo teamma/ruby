@@ -1,3 +1,4 @@
+# ruby
 #### 처음에 github에 올릴 때
 1. 해당 폴더에서 git을 사용하겠다. (로컬저장소)
   `git init`
@@ -50,4 +51,3 @@
   [nokogiri](https://github.com/sparklemotion/nokogiri)
 
   ​
-
