@@ -5,6 +5,7 @@ require 'httparty'
 require 'rest-client'
 require 'uri'
 
+
 get '/' do
   erb :index
 end
