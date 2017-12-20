@@ -13,8 +13,10 @@
 </form>
 <hr  />
 <% @post.comments.reverse.each_with_index do |comment, i| %>
-  <%=@post.comments.length - i %>번째 댓글 : <p><%= comment.content %></p>
+<ul class="list-group">
+  <li class="list-group-item"><%=@post.comments.length - i %>번째 댓글 : <p><%= comment.content %></p></li>
   <hr />
-<% end %>
+</ul>
 
+<% end %>
 <a class="btn btn-primary" href="/" role="button">홈</a>
