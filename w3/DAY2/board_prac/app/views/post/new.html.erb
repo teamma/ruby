@@ -12,9 +12,8 @@
     <label>내용</label>
     <textarea name="content" class="form-control" rows="3" placeholder="내용을 작성해주세요!"></textarea>
   </div>
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token"%> />
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>" />
   <button type="submit" class="btn btn-secondary">확인</button>
   <button type="reset" class="btn btn-secondary">다시쓰기</button>
-  <button type="button" class="btn btn-secondary"><a href="/">취소</a></button>
-
+  <a class="btn btn-primary" href="/" role="button">취소</a>
 </form>

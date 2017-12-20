@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'post/edit/:id' => 'post#edit'
 
   post 'post/update/:id' => 'post#update'
+
+  get 'post/add_comment' => 'post#add_comment'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

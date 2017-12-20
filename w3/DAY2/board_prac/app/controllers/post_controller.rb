@@ -20,6 +20,7 @@ class PostController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comments = Comment.all
   end
 
 
@@ -27,7 +28,7 @@ class PostController < ApplicationController
     Post.find(params[:id]).destroy
     redirect_to '/'
   end
-  
+
   def edit
     @post = Post.find(params[:id])
   end
@@ -42,4 +43,13 @@ class PostController < ApplicationController
 
     redirect_to "/post/show/#{params[:id]}"
   end
+
+  def add_comment
+    Comment.create(
+      content: params[:content],
+      post_id: params[:id]
+    )
+    redirect_to :back
+  end
+
 end
