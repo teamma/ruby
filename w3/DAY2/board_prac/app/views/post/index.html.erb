@@ -25,7 +25,7 @@
       <td><%= post.created_at%></td>
       <td><a href="/post/show/<%= post.id %>">보기</a></td>
       <td><a href="/post/edit/<%= post.id %>">수정</a></td>
-      <td><a href="/post/destroy/<%= post.id %>">삭제</a></td>
+      <td><a data-confirm="정말 지우실건가?" data-method="delete" href="/post/destroy/<%= post.id %>">삭제</a></td>
     </tr>
     <% end %>
   </tbody>

@@ -1,5 +1,5 @@
 <h2>게시글 수정하기!</h2><br />
-<form action="/post/update/<%= @post.id %>">
+<form action="/post/update/<%= @post.id %>" method="post">
   <div class="form-group">
     <label>작성자</label>
     <input value="<%= @post.username%>" type="text" name="username" class="form-control" placeholder="이름">
@@ -12,6 +12,7 @@
     <label>내용</label>
     <textarea name="content" class="form-control" rows="3" placeholder="내용을 작성해주세요!"><%=@post.content%></textarea>
   </div>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <button type="submit" class="btn btn-secondary">확인</button>
   <button type="reset" class="btn btn-secondary">되돌리기</button>
   <button type="button" class="btn btn-secondary"><a href="/">취소</a></button>
