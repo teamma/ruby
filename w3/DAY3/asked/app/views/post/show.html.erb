@@ -1,27 +1,25 @@
-<h4>글번호</h4><br />
-<p><%= @post.id %></p><hr />
-<h4>사용자이름</h4><br />
-<p><%= @post.username %></p><hr />
-<h4>제목</h4><br />
-<p><%= @post.title %></p><hr />
-<h4>내용</h4><br />
-<p><%= @post.content %></p><hr />
+<h4>글번호</h4>
+<div class="p-3 mb-2 bg-secondary text-white"><%= @post.id %></div>
+<h4>사용자이름</h4>
+<div class="p-3 mb-2 bg-secondary text-white"><%= @post.username %></div>
+<h4>제목</h4>
+<div class="p-3 mb-2 bg-secondary text-white"><%= @post.title %></div>
+<h4>내용</h4>
+<div class="p-3 mb-2 bg-secondary text-white"><%= @post.content.html_safe %></div>
 <h4>작성시간</h4>
-<p><%= @post.created_at %></p><hr />
+<div class="p-3 mb-2 bg-secondary text-white"><%= @post.created_at %></div>
 <hr  />
-
+<a class="btn btn-primary" href="/post/edit/<%= @post.id %>">수정하기</a><br />
 <h4>댓글 달기</h4>
 <form action="/post/add_comment">
   <input type="text" name="content" placeholder="댓글을 입력해주세요" />
   <input type="hidden" name="id" value="<%= @post.id %>">
   <input class="btn btn-primary" type="submit" value="달기">
 </form>
-<hr  />
 <% @post.comments.reverse.each_with_index do |comment, i| %>
 <ul class="list-group">
-  <li class="list-group-item"><%=@post.comments.length - i %>번째 댓글 : <p><%= comment.content %></p></li>
-  <hr />
+  <li class="list-group-item"><%=@post.comments.length - i %>번째 댓글 : <p>
+    <div class="p-3 mb-2 bg-info text-white"><%= comment.content %></div></p></li>
 </ul>
-
 <% end %>
 <a class="btn btn-primary" href="/" role="button">홈</a>

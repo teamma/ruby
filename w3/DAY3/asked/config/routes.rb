@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'user/index'
+
+  get 'user/new'
+
+  get 'user/create'
+
+  get 'user/login'
+
+  get 'user/login_process'
+
+  get 'user/logout'
+
   root 'post#index'
 
   get 'post/index'
@@ -22,6 +34,15 @@ Rails.application.routes.draw do
 
   get 'post/register' => 'post#register'
 
+# User 추가, 로그인
+
+  get 'user/index'
+  get 'user/new'
+  post 'user/create'
+
+  get 'user/login'
+  get 'user/logout'
+  post 'user/login_process'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
