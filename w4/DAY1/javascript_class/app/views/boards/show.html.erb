@@ -1,0 +1,6 @@
+<h1><%= @board.title %></h1>
+<p><%= @board.contents %></p>
+
+<a href="/">홈으로</a>
+<a href="/boards/<%= @board.id %>/edit">수정</a>
+<a href="/boards/<%= @board.id %>" data-method="delete" data-confirm="삭제할꼬얌?">삭제</a>
